@@ -1,0 +1,56 @@
+{
+    "name": "roxblnfk/yiigregator",
+    "description": "Buggregator integration for Yii",
+    "keywords": [
+        "buggregator",
+        "xhprof",
+        "yii",
+        "yii3",
+        "psr",
+        "profile"
+    ],
+    "homepage": "https://github.com/roxblnfk/yii-buggregator",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Aleksei Gagarin (roxblnfk)",
+            "homepage": "https://github.com/roxblnfk"
+        }
+    ],
+    "funding": [
+        {
+            "type": "patreon",
+            "url": "https://patreon.com/roxblnfk"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "psr/http-server-middleware": "^1.0",
+        "spiral-packages/profiler": "^1.2"
+    },
+    "require-dev": {
+        "buggregator/trap": "^1."
+    },
+    "autoload": {
+        "psr-4": {
+            "Roxblnfk\\Yiigregator\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "config-plugin-options": {
+            "source-directory": "config"
+        },
+        "config-plugin": {
+            "params": "params.php",
+            "di": "di.php",
+            "di-console": "di-console.php",
+            "events-console": "events-console.php",
+            "di-delegates": "di-delegates.php"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
