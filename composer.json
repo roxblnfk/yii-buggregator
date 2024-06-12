@@ -29,7 +29,7 @@
         "spiral-packages/profiler": "^1.2"
     },
     "require-dev": {
-        "buggregator/trap": "^1."
+        "buggregator/trap": "^1.9"
     },
     "autoload": {
         "psr-4": {
@@ -45,10 +45,7 @@
         },
         "config-plugin": {
             "params": "params.php",
-            "di": "di.php",
-            "di-console": "di-console.php",
-            "events-console": "events-console.php",
-            "di-delegates": "di-delegates.php"
+            "di": "di.php"
         }
     },
     "minimum-stability": "dev",
