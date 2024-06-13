@@ -20,21 +20,21 @@ If you use Yii with `composer-config-plugin`, the package might be configured vi
 
 ### Profiling
 
-Turn on the profiler and set the Buggregator endpoint using environment variables.
+1. Add the `Roxblnfk\Yiigregator\Middleware\ProfilerMiddleware` middleware to the top of the middlewares list (possibly in the `$params['middlewares']`).
+2. Turn on the profiler and set the Buggregator endpoint using environment variables:
+  ```env
+  PROFILER_ENABLED=true
+  PROFILER_ENDPOINT=http://127.0.0.1:8000/api/profiler/store
+  ```
 
-```env
-PROFILER_ENABLED=true
-PROFILER_ENDPOINT=http://127.0.0.1:8000/api/profiler/store
-```
-
-> [NOTE]:
+> [!NOTE]
 > `http://127.0.0.1:8000/api/profiler/store` is the default value for the Buggregator endpoint.
 
-> [NOTE]:
+> [!NOTE]
 > Depending on your environment, you may need to set the `PROFILER_ENDPOINT` to a different value.
 > For example, if you are using Docker, you may need to set it to `http://buggregator:8000/api/profiler/store`.
 
-By default, XHProf is used for profiling.
+By default, XHProf is used for profiling. Make sure it is installed and enabled in your PHP configuration.
 
 ## License
 

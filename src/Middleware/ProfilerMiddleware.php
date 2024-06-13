@@ -23,7 +23,12 @@ class ProfilerMiddleware implements MiddlewareInterface
             return $handler->handle($request);
         } finally {
             // todo: send data after a 'response sent' event
-            $this->profiler->end();
+            try {
+                $this->profiler->end();
+            } catch (\Throwable $e) {
+                // todo: log into LoggerInterface
+                \error_log($e->getMessage());
+            }
         }
     }
 }
